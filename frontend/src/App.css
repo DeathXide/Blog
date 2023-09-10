@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: auto;
+  padding: 20px;
+  max-width: 800px;
+  color: black;
+  font-family: "Nunito", sans-serif;
+}
+
+header a {
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+div.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+div.post div.image img {
+  width: 100%;
+}
+
+div.details h1 {
+  margin: 0;
+}
+
+p.info {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+p.info span:nth-child(1) {
+  font-weight: bold;
+}
+
+p.info span:nth-child(2) {
+  color: #888;
+}
+
+form.postform {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+form.postform input {
+  padding: 10px;
+  margin: 1px;
+  border-radius: 5px;
+  border: none;
+  border: 0.5px solid #888;
+}
+
+form.postform button {
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #888;
+  color: aliceblue;
+  border-radius: 5px;
+  border: none;
+}
+
+form.login,
+form.register {
+  text-align: center;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+form.login h1,
+form.register h1 {
+  margin-bottom: 20px;
+}
+
+form.login input,
+form.register input {
+  padding: 5px;
+  margin: 1px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 0.5px solid #888;
+}
+
+form.login button,
+form.register button {
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #888;
+  color: aliceblue;
+  border-radius: 5px;
+  border: none;
+}
+
+span.user {
+  text-transform: capitalize;
+}
+
+div.postSite div.image {
+  display: flex;
+  max-width: 90vw;
+  height: 50vh;
+}
+
+div.postSite div.image img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+div.postSite {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+div.postSite p.info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+div.postSite h1.title {
+  font-size: 3rem;
+}
+
+div.content {
+  line-height: 2.5;
+  text-align: justify;
+}
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  div.post {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  div.postSite div.image {
+    max-width: 800px;
+    height: 500px;
+  }
+
+  form.login,
+  form.register {
+    width: 400px;
+  }
+}
