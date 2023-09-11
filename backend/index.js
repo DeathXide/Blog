@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 const mongoose = require("mongoose");
 const User = require("./models/UserModel");
 const Post = require("./models/PostModel");
@@ -10,22 +11,20 @@ const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
 const fs = require("fs");
 const FrontURL = process.env.FrontURL;
-const database = process.env.database;
+const Database = process.env.Database;
+const sec = process.env.sec;
 
-const sec = "akjs%alskjd@kajsd";
 app = express();
 app.use(cors({ credentials: true, origin: FrontURL }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
-mongoose.connect(
-  "mongodb+srv://admin-hrutu:fire1234@cluster0.vwlmw.mongodb.net/blog"
-);
+mongoose.connect(Database);
 
 const salt = bcrypt.genSaltSync(10);
 
 app.get("/test", (req, res) => {
-  res.json("test ok");
+  res.json(process.env);
 });
 
 app.post("/register", async (req, res) => {

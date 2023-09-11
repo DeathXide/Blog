@@ -50,7 +50,7 @@ function PostPage() {
       <p className="info">
         <span className="user">By {userInfos.author.username}</span>{" "}
         <time> {formatISO9075(new Date(userInfos.createdAt))} </time>
-        {userInfo.id === userInfos.author._id && (
+        {userInfo?.id === userInfos.author._id && (
           <button onClick={handleDelete}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
